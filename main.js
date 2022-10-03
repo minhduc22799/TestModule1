@@ -1,13 +1,20 @@
+console.log("----- Bai 1 -----: \n\n")
 function findAvg(arr){
     let sum = 0;
     for (let i = 0; i<arr.length; i++){
         sum = sum+arr[i];
     }
     let avg = sum/arr.length
-    console.log("AVG:  "+avg)
-}
-findAvg([5,4,5,6])
+    console.log(arr)
+    return avg;
 
+}
+let arr = [5,4,5,6]
+let result = findAvg(arr)
+console.log("AVG: " + result);
+
+
+console.log("\n\n----- Bai 2 -----: \n\n")
 
 function insertNumberToArray(arr, x , index){
     let indexArr = arr[index];
@@ -29,16 +36,25 @@ function insertNumberToArray(arr, x , index){
     arrResult = arrNew1.concat(arrNew2);
 
     }
-    console.log(arrResult)
+    console.log("x : " + x)
+    console.log("index : " + index)
+    return arrResult;
 }
+let arr2 = [3,2,1,5]
+let x = 10, index  = 2;
+let result2 = insertNumberToArray(arr2,x,index)
+console.log(result2)
 
-insertNumberToArray([1,2,4,5],9,2)
+
+
+console.log("\n\n----- Bai 3 -----: \n\n")
+
 
 function sumOfListPrime(x) {
     let count =0
     let countSNT = 0;
     let sum = 0
-    for (let i = 2; i <= x; i++) {
+    for (let i = 0; i <= x; i++) {
         if (countSNT <= x) {
             for (let j = 1; j <= i; j++) {
                 if (i % j === 0) {
@@ -55,10 +71,13 @@ function sumOfListPrime(x) {
             break;
         }
     }
-    console.log("Tong so nguyen to tu 0 toi "+ x +" la: " + sum)
-}
+    return sum;
 
-sumOfListPrime(11)
+}
+let number  = 11;
+let result3 = sumOfListPrime(number);
+console.log("Sum = "+result3)
+
 
 
 
